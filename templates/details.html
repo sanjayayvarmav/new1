@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <image src= "{{mov.img.url}}" width="300" height="400";></image>
+        </div>
+        <div class="col-md-6">
+        <h2>{{mov.name}}</h2>
+        <h5>{{mov.desc}}</h5>
+        <h5>{{mov.year}}</h5>
+            <div class="row">
+    <p><a href="{% url 'demo2app:update' mov.id %}" class="btn btn-warning">update</a></p>&nbsp;
+    <p><a href="{% url 'demo2app:delete' mov.id %}" class="btn btn-danger">Delete</a></p>
+            </div>
+</div>
+ </div>
+</div>
+
+</body>
+</html>
+{% endblock %}
